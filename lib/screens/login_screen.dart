@@ -3,11 +3,11 @@ import 'package:demo_form_validation/screens/unlog_in.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../component/app_body.dart';
+import 'app_body.dart';
 import '../constants/constants.dart';
 import '../theme/theme_manager.dart';
 
-void main()=> runApp(const Login());
+void main() => runApp(const Login());
 
 ThemeManager themeManager = ThemeManager(ThemeMode.light);
 
@@ -19,7 +19,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
   var isLoading = false;
   var isobx = false;
 
@@ -75,10 +74,10 @@ class _LoginState extends State<Login> {
 
   /// For large screens
   Widget _buildLargeScreen(
-      TextEditingController emailController,
-      TextEditingController passwordController,
-      Size size,
-      ) {
+    TextEditingController emailController,
+    TextEditingController passwordController,
+    Size size,
+  ) {
     return Row(
       children: [
         SizedBox(width: size.width * 0.06),
@@ -319,20 +318,11 @@ class _LoginState extends State<Login> {
 
           if ((emailController.text == 'admin') &&
               (passwordController.text == 'admin')) {
-
-            // Navigator.of(context)
-            //     .pushReplacementNamed(HomeBody.routeName);
             Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: ((context) => const HomeBody())
-                )
-            );
-          }else{
+                MaterialPageRoute(builder: ((context) => const HomeBody())));
+          } else {
             Navigator.of(context).push(
-                MaterialPageRoute(
-                    builder: ((context) => const UnLogin())
-                )
-            );
+                MaterialPageRoute(builder: ((context) => const UnLogin())));
           }
         },
         child: Text(
