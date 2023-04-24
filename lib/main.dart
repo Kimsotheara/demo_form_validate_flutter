@@ -1,6 +1,5 @@
 import 'package:demo_form_validation/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'component/app_bar.dart';
 
 void main() => runApp(const MyAppBar());
 
