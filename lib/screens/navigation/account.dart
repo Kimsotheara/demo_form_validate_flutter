@@ -20,8 +20,8 @@ class Account extends StatelessWidget {
                     height: 100,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100),
-                      child: Image.asset(
-                        'assets/avatar.png',
+                      child: Image.network(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_-1M2QWIftnpajzO1ru_ovTHdVOqMqGrJg&usqp=CAU',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -49,9 +49,8 @@ class Account extends StatelessWidget {
               Text('User', style: Theme.of(context).textTheme.headline4),
               Text('user1@gmail.com',
                   style: Theme.of(context).textTheme.bodyText2),
-              const SizedBox(height: 20),
-
               // const SizedBox(height: 10),
+
               GestureDetector(
                 onTap: () {},
                 child: Card(
@@ -64,8 +63,8 @@ class Account extends StatelessWidget {
                     padding: const EdgeInsets.only(
                       left: 15,
                       right: 10,
-                      bottom: 6,
-                      top: 6,
+                      bottom: 3,
+                      top: 3,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,7 +79,7 @@ class Account extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Divider(),
+                        // Divider(),
                         ListTile(
                           title: Text(
                             'Email',
@@ -97,7 +96,7 @@ class Account extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Divider(),
+                        // Divider(),
                         ListTile(
                           title: Text(
                             'GitHub',
@@ -114,7 +113,7 @@ class Account extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Divider(),
+                        // Divider(),
                         ListTile(
                           title: Text(
                             'Linkedin',

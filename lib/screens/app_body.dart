@@ -46,6 +46,14 @@ class _HomeBodyState extends State<HomeBody> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_navItems[selectedPageIndex]["title"]),
+        bottom: const TabBar(
+          tabs: [
+            Tab(icon: Icon(Icons.home), text: 'Home'),
+            Tab(icon: Icon(Icons.food_bank), text: 'Food'),
+            Tab(icon: Icon(Icons.newspaper), text: 'News'),
+            Tab(icon: Icon(Icons.settings), text: 'Setting'),
+          ],
+        ),
       ),
       body: _navItems[selectedPageIndex]["screen"],
       bottomNavigationBar: BottomNavigationBar(
@@ -71,8 +79,14 @@ class _HomeBodyState extends State<HomeBody> {
           ),
           BottomNavigationBarItem(
             icon: selectedPageIndex == 3
-                ? const Icon(Icons.add_circle, size: 50.0,)
-                : const Icon(Icons.add_circle, size: 50.0,),
+                ? const Icon(
+                    Icons.add_circle,
+                    size: 50.0,
+                  )
+                : const Icon(
+                    Icons.add_circle,
+                    size: 50.0,
+                  ),
             label: 'Add',
           ),
           BottomNavigationBarItem(
